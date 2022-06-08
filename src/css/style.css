@@ -1,0 +1,85 @@
+/* Author: JhonyRovetta */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 5px;
+    padding-left: 5px;
+    color: whitesmoke;
+
+    height: 60px;
+    width: 175px;
+    border-radius: 10px;
+    border: 3px solid #333;
+    background: #222;
+
+    transition: .3s;
+}
+
+.button:hover{
+    transform: scale(1.2);
+    letter-spacing: 8px;
+    padding-left: 8px;
+    filter: drop-shadow(0 0 20px var(--color));
+    color: var(--color);
+    border-color: var(--color);
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 20px;
+    height: 6px;
+    width: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--color);
+    background: #222;
+    transition: .5s;
+}
+
+.button:hover::before{
+    transform: translateX(115px) scale(1.2);
+    width: 17px;
+}
+
+.button::after{
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    height: 6px;
+    width: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--color);
+    background: #222;
+    transition: .5s;
+}
+
+.button:hover::after{
+    transform: translateX(-115px) scale(1.2);
+    width: 17px;
+}
